@@ -1,0 +1,5 @@
+{
+  "name": "Oogiri Master AI",
+  "description": "An AI-powered Oogiri (Funny Image Captioning) generator using Gemini 3.0 Pro with thinking capabilities to create hilarious memes.",
+  "requestFramePermissions": []
+}
