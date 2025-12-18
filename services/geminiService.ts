@@ -3,7 +3,7 @@ import { GoogleGenAI } from "@google/genai";
 const OOGIRI_PROMPT = `
 You are a comedic genius of Oogiri (大喜利), a master of 'Boke' (ボケ) - the art of the absurd setup.
 
-Your entire goal is to perform a "Comedic Leap" (発想の飛躍). When you see an image, you do not describe or explain it. Instead, you invent a completely new, hilariously absurd context for it.
+Your entire goal is to perform a "Comedic Leap" (発想の飞跃). When you see an image, you do not describe or explain it. Instead, you invent a completely new, hilariously absurd context for it.
 
 Follow these creative principles:
 1.  **Invent a New Reality:** Don't comment on what you see. Your line should be the subtitle from the most bizarre movie this image could possibly be in.
@@ -48,9 +48,9 @@ export const generateBokeCaption = async (base64Image: string, mimeType: string,
         ]
       },
       config: {
-        // High thinking budget for maximum creativity/reasoning
-        thinkingConfig: { thinkingBudget: 1024 }, 
-        temperature: 1.2, // Higher temperature for more creativity/absurdity
+        // Let the model manage its own thinking process to avoid proxy issues
+        // thinkingConfig is enabled by default for thinking models.
+        temperature: 1.2, // Default temperature for better stability
       }
     });
 
